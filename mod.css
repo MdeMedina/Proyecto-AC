@@ -1,0 +1,22 @@
+.col-sm, .col-6 {
+    margin-bottom: 10px;
+    justify-content: center;
+    vertical-align: center;
+}
+
+.D1, .D2, .D3, .D4, .D5, .D6{
+    display: none;
+    max-width: 33.33%;
+}
+
+.centrado {
+    display: flex;
+    justify-content: center;
+}
+
+#tablas {
+    padding-bottom: 20px;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    max-width: 100px;
+}

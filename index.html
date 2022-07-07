@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet"/>
+     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="paquetes/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link rel="stylesheet" href="tablas.css">
+    <link rel="stylesheet" href="mod.css">
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <title>Tablas AC</title>
+</head>
+<body id="body">
+
+    <form>
+        <p>
+          <div class="container-fluid">
+            <h1>Crea la Tabla para tus clientes</h1> 
+            <br>
+            <div class="row">
+              <div class="col-sm">
+            <label for="Ticket" class="latarea " >Codigo Emisor: </label>
+            <select id="mibuscador"class="mi-selector" name="clientes">
+                <option value='0'>Seleccionar un codigo</option>
+        </select>
+      </div>
+      <div class="col-sm">
+            <label for="tarifa">Tarifa Cambiaria: </label>
+            <input type="number" id="tarifa">
+          </div>
+          <div class="col-sm">
+            <label for="Inicio">Fecha de inicio: </label>
+            <input type="text" id="campofecha" autocomplete="off">
+          </div>
+          <div class="col-sm " id="cp2">
+          </div>
+</div>
+            <hr>
+            <div class="row">
+              <div class="col-6">
+                <label for="pasajeros">Plan Emisivo: </label>
+                <select id="mibuscador5"class="mi-selector" name="clientes">
+                    <option value='0'>Seleccione el plan emisivo</option>
+              </select>
+              </div>
+              <div class="col-6">
+            <label for="pasajeros">Numero de pasajeros: </label>
+            <select id="mibuscador2"class="mi-selector" name="clientes">
+                <option value='0'>Seleccione la cantidad de pasajeros</option>
+        </select>
+      </div>
+      <div class="col-6">
+        <label for="Plan">Plan: </label>
+        <select id="mibuscador3"class="mi-selector" name="clientes">
+            <option value='0'>Seleccionar un plan</option>
+    </select></div>
+    <div class="col-6">
+    <label for="addon">Add On: </label>
+    <select id="mibuscador4"class="mi-selector" name="clientes[]" multiple="multiple">
+</select></div>
+</div>
+
+<hr>
+<div class="row">
+  <div class="col-sm">Cobertura 35.000$ <input type="checkbox" id="cbox1" value="first_checkbox"></div>
+  <div class="col-sm">Cobertura 60.000$ <input type="checkbox" id="cbox2" value="first_checkbox"></div>
+  <div class="col-sm">Cobertura 150.000$ <input type="checkbox" id="cbox3" value="first_checkbox"></div>
+  <div class="col-sm">Cobertura 250.000$ <input type="checkbox" id="cbox4" value="first_checkbox"></div>
+  <div class="col-sm">Cobertura 1.000.000$ <input type="checkbox" id="cbox5" value="first_checkbox"></div>
+  <div class="col-sm">Cobertura 3.000.000$ <input type="checkbox" id="cbox6" value="first_checkbox"></div>
+</div>
+
+<div class="accordion" id="accordionExample">
+  <div class="row">
+    <div class="col-2 D1">
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Cobertura 35.000$
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row">
+            <div class="col-sm">
+            <label for="COD">COD Tarifa: </label>
+            <input type="number" id="COD1">
+            </div>
+            <div class="col-sm">
+            <label for="precio">Tarifa: </label>
+            <input type="number" id="precio1">
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-2 D2">
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Cobertura 60.000$
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row">
+            <div class="col-sm">
+            <label for="COD">COD Tarifa: </label>
+            <input type="number" id="COD2">
+            </div>
+            <div class="col-sm">
+            <label for="precio">Tarifa: </label>
+            <input type="number" id="precio2">
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-2 D3">
+    <div class="accordion-item ">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Cobertura 150.000$
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <div class="row">
+            <div class="col-sm">
+            <label for="COD">COD Tarifa: </label>
+            <input type="number" id="COD3">
+            </div>
+            <div class="col-sm">
+            <label for="precio">Tarifa: </label>
+            <input type="number" id="precio3">
+            </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    </div>
+      <div class="col-2 D4">
+    <div class="accordion-item ">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+            Cobertura 250.000$
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="row">
+            <div class="col-sm">
+            <label for="COD">COD Tarifa: </label>
+            <input type="number" id="COD4">
+            </div>
+            <div class="col-sm">
+            <label for="precio">Tarifa: </label>
+            <input type="number" id="precio4">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 D5">
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed" class="latarea" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+            Cobertura 1.000.000$
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="row">
+            <div class="col-sm">
+            <label for="COD">COD Tarifa: </label>
+            <input type="number" id="COD5">
+            </div>
+            <div class="col-sm">
+            <label for="precio">Tarifa: </label>
+            <input type="number" id="precio5">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-2 D6">
+      <div class="accordion-item ">
+        <h2 class="accordion-header" id="headingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+            Cobertura 3.000.000$
+          </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="row">
+            <div class="col-sm">
+            <label for="COD">COD Tarifa: </label>
+            <input type="number" id="COD6">
+            </div>
+            <div class="col-sm">
+            <label for="precio">Tarifa: </label>
+            <input type="number" id="precio6">
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+    </p>
+    <div class="centrado">
+    <input type="button" value="Crear Tabla" id="enviar" class='btn btn-primary enviar'>
+  </div>
+    </form>
+    <hr>
+    <div id="tablas"></div>
+  </div>
+    <script type="text/javascript" src="scripts-jquery.js"></script>
+    <script src="BDD/AddOn.js"></script>
+    <script src="BDD/Emision.js"></script>
+    <script src="tabla.js"></script>
+    <script src="accordion.js"></script>
+</body>
+</html>
