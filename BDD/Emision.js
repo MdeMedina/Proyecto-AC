@@ -9,7 +9,8 @@ class Empresa {/*class: modelador de objetos, mediante el cunstructor(function)*
     opciones.innerHTML += "<option value='" + this.eCode +"' id='" + this.eCode + "'>" + this.eCode + "</option>";
   }
 
-}
+    }
+var Nempresa = document.getElementById("Nempresa")
 var empresas = [];
 empresas.push(new Empresa(2309,'CODIGO KAM'));
 empresas.push(new Empresa(3169,'AUTOFLAME'));

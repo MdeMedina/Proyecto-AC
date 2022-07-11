@@ -250,7 +250,6 @@ for (var e of empresas) {
 
 
 var boton = document.getElementById('enviar')
-
 boton.addEventListener('click', pintar);
 document.getElementById('body').addEventListener('keyup', function(event) {
         if (event.code === 'Enter')

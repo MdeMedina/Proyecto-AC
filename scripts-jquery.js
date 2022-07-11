@@ -1,9 +1,17 @@
 $(document).ready(function(){
     $('#mibuscador').select2({});
+    $('#mibuscador').on('select2:select', function () {
+        for (var e of empresas){
+            console.log(e)
+            if (e.eCode == opciones.value ){
+              Nempresa.innerHTML = "<p id='nande'>Empresa: '" + e.name + "'</p>"
+            }}
+    });
 });
 
+
 $(document).ready(function(){
-    $('#mibuscador2').select2();
+    $('#mibuscador2').select2();                        
 });
 
 $(document).ready(function(){
@@ -47,7 +55,7 @@ $.datepicker.regional['es'] = {
 
    var cp2 = document.getElementById('cp2')
    function fechaexp () {
-    cp2.innerHTML = '<label for="Inicio">Fecha de expiracion: </label> <input type="text" id="campofecha2" autocomplete="off">'
+    cp2.innerHTML = '<label for="Inicio"><span class="ast">*</span> Fecha de expiracion: </label> <input type="text" id="campofecha2" autocomplete="off">'
    $.datepicker.regional['es'] = {
     closeText: 'Cerrar',
     prevText: '< Ant',
