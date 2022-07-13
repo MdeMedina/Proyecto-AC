@@ -20,6 +20,9 @@ class Plan {
     }
 
 }
+function roundToTwo(num) {
+    return +(Math.round(num + "e+2")  + "e-2");
+}
 
 const currency = function(number){
     return new Intl.NumberFormat('es-CL', {style: 'currency',currency: 'CLP', minimumFractionDigits: 2}).format(number);
@@ -121,13 +124,16 @@ if (ecode == 0 || !tCambiaria.value || !inicio.value || !exp.value || opciones5.
 
 
  for (var i in coberturas){
-
-    suma.push(coberturas[i].Tarifa + fAdprecio) 
+    var num = coberturas[i].Tarifa + fAdprecio;
+    num = roundToTwo(num)
+    suma.push(num) 
     
 }
 
 for (var i in suma){
-    multic.push(suma[i] * tCambiaria.value)
+    var num = suma[i] * tCambiaria.value;
+    num = roundToTwo(num)
+    multic.push(num)
 }
 
 for (var i in multic){
